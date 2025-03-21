@@ -1,6 +1,12 @@
+import { IconType } from "react-icons";
+import { CiRouter } from "react-icons/ci";
 import { FiZap } from "react-icons/fi";
-import { SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
-
+import {
+  SiJavascript,
+  SiRedux,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 export const items = [
   {
     icon: SiTypescript,
@@ -22,15 +28,50 @@ export const items = [
   },
   {
     icon: SiTailwindcss,
-    name: "Tailwind + Shadcn",
+    name: "Tailwind",
+    desc: "Styling made easy",
+    color: "text-sky-400",
+  },
+  {
+    icon: FiZap,
+    name: "Shadcn",
     desc: "Beautiful components",
+    color: "text-sky-400",
+  },
+  {
+    icon: CiRouter,
+    name: "React Router DOM",
+    desc: "Routing made easy",
     color: "text-sky-400",
   },
 ];
 
 export const commands = {
-  npm: "npm create react-jaldi my-app-name",
-  yarn: "yarn create react-jaldi my-app-name",
-  pnpm: "pnpm create react-jaldi my-app-name",
-  bun: "bun create react-jaldi my-app-name",
+  npm: {
+    ts: "npm create react-jaldi my-app-name",
+    js: "npm create react-jaldi js my-app-name",
+  },
+  yarn: {
+    ts: "yarn create react-jaldi my-app-name",
+    js: "yarn create react-jaldi js my-app-name",
+  },
+  pnpm: {
+    ts: "pnpm create react-jaldi my-app-name",
+    js: "pnpm create react-jaldi js my-app-name",
+  },
+  bun: {
+    ts: "bun create react-jaldi my-app-name",
+    js: "bun create react-jaldi js my-app-name",
+  },
 };
+
+export const languages: Ilanguages[] = [
+  { name: "TypeScript", value: "ts", icon: SiTypescript },
+  { name: "JavaScript", value: "js", icon: SiJavascript },
+];
+
+export interface Ilanguages {
+  name: string;
+  value: "ts" | "js";
+  icon: IconType;
+}

@@ -37,9 +37,9 @@ const PackageSelector = ({ activeTab, setActiveTab }: Props) => {
         key={activeTab}
       >
         <code className="text-xs whitespace-nowrap sm:text-sm font-mono text-green-400 flex-1">
-          $ {commands[activeTab]}
+          $ {commands[activeTab].ts}
         </code>
-        <CopyButton text={commands[activeTab]} />
+        <CopyButton text={commands[activeTab].ts} />
       </motion.div>
     </div>
   );
