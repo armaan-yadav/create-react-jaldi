@@ -64,8 +64,8 @@ const HomePage = () => {
             className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2 sm:pt-4"
           >
             <button className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-lg font-medium transition-all bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:from-purple-600 hover:to-blue-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50 shadow-lg flex items-center justify-center">
-              npm install -g create-react-jaldi
-              <CopyButton text="npm install -g create-react-jaldi" />
+              npm create react-jaldi .
+              <CopyButton text="npm create react-jaldi ." />
             </button>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
