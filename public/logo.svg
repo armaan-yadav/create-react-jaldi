@@ -1,0 +1,22 @@
+<svg width="250" height="250" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle -->
+  <ellipse cx="100" cy="100" rx="35" ry="80" stroke="url(#gradient)" stroke-width="8" fill="none" transform="rotate(30 100 100)" />
+  
+  <!-- Fast-forward orbit (modified orbit with arrow) -->
+  <path d="M100 30 C 140 65, 160 100, 100 170" stroke="#FF9800" stroke-width="10" fill="none" stroke-linecap="round" />
+  <path d="M100 170 L 85 150 L 115 155 Z" fill="#FF9800" />
+  
+  <!-- Bottom orbit -->
+  <ellipse cx="100" cy="100" rx="35" ry="80" stroke="url(#gradient)" stroke-width="8" fill="none" transform="rotate(-30 100 100)" />
+  
+  <!-- Central dot -->
+  <circle cx="100" cy="100" r="18" fill="url(#gradient)" />
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
