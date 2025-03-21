@@ -51,9 +51,13 @@ const HomePage = () => {
               </span>
             </p>
 
-            <p className="mt-3 sm:mt-5 text-base sm:text-lg md:text-xl text-gray-400">
+            <p className="mt-3 sm:mt-5 text-base sm:text-lg md:text-xl text-gray-500">
               A modern React starter template with TypeScript, Tailwind CSS,
               Shadcn UI, and Redux—all pre-configured and ready to go.
+            </p>
+            <p className="mt-3 sm:mt-5 text-base sm:text-lg md:text-xl text-gray-400">
+              Create an empty folder, paste the following command and it's done!
+              It will automatically open the localhost in your browser.
             </p>
           </motion.div>
 
