@@ -18,6 +18,8 @@ module.exports = {
       },
       animation: {
         "gradient-x": "gradient-x 5s ease infinite",
+        "spin-slow": "spin 8s linear infinite",
+        "pulse-glow": "pulse 3s infinite",
       },
       keyframes: {
         "gradient-x": {

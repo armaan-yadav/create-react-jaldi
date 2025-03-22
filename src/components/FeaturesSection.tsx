@@ -2,12 +2,11 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import shadcnFavicon from "../assets/favicon.ico";
 import reactRouterFavicon from "../assets/react-router-favicon.svg";
-import { commands, items, languages } from "../constannts";
+import { commands, items } from "../constannts";
 import CopyButton from "./CopyButton";
 
 const FeaturesSection = () => {
   const [activeTab, setActiveTab] = useState<keyof typeof commands>("npm");
-  const [current, setCurrent] = useState<"ts" | "js">("ts");
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}
@@ -87,7 +86,7 @@ const FeaturesSection = () => {
                   </motion.button>
                 ))}
               </div>
-              <div className="flex items-center gap-2 sm:gap-3">
+              {/* <div className="flex items-center gap-2 sm:gap-3">
                 <span className="text-xs sm:text-sm text-gray-400 mr-1">
                   Language:
                 </span>
@@ -105,15 +104,9 @@ const FeaturesSection = () => {
                     <lang.icon className="text-xl sm:text-2xl" />
                   </button>
                 ))}
-              </div>
+              </div> */}
             </div>
             <div className="flex flex-col mt-2">
-              <div className="flex items-center text-xs text-gray-400 mb-1 px-1">
-                <span>
-                  Creating app with{" "}
-                  {current === "js" ? "JavaScript" : "TypeScript"}
-                </span>
-              </div>
               <motion.div
                 className="bg-gray-900/70 backdrop-blur-md p-3 sm:p-4 rounded-md border border-white/10 flex flex-col shadow-lg overflow-x-auto"
                 initial={{ opacity: 0 }}
@@ -123,9 +116,9 @@ const FeaturesSection = () => {
                 <div className="flex items-center w-full">
                   <span className="text-gray-500 mr-2">$</span>
                   <code className="text-sm whitespace-nowrap sm:text-base font-mono text-green-400 flex-1">
-                    {commands[activeTab][current]}
+                    {commands[activeTab].ts}
                   </code>
-                  <CopyButton text={commands[activeTab][current] as string} />
+                  <CopyButton text={commands[activeTab].ts as string} />
                 </div>
               </motion.div>
             </div>
