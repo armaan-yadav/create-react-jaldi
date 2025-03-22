@@ -1,19 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 
-interface TrailPoint {
-  x: number;
-  y: number;
-  id: number;
-}
-
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [hidden, setHidden] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [interactiveHovered, setInteractiveHovered] = useState(false);
   const [headingHovered, setHeadingHovered] = useState(false);
-  const [buttonHovered, setButtonHovered] = useState(false);
-  const trailLength = 20; // Increased trail length for more particles
+
   const animationRef = useRef<number | null>(null);
   const targetRef = useRef({ x: 0, y: 0 });
   const lastPositionRef = useRef({ x: 0, y: 0 });
@@ -118,9 +111,7 @@ const CustomCursor = () => {
           hidden ? "opacity-0" : "opacity-100"
         } ${clicked ? "cursor-clicked" : ""} ${
           transparent ? "cursor-transparent" : ""
-        } ${isExpanded ? "cursor-expanded" : ""} ${
-          buttonHovered ? "cursor-button cursor-expanded" : "" // Added cursor-expanded class for buttons
-        }`}
+        } ${isExpanded ? "cursor-expanded" : ""}`}
         style={{
           left: `${targetRef.current.x}px`,
           top: `${targetRef.current.y}px`,
