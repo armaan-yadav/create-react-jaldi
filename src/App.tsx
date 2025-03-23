@@ -5,7 +5,7 @@ import CustomCursor from "./components/CustomCursor";
 function App() {
   return (
     <>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <Toaster />
       <HomePage />
     </>

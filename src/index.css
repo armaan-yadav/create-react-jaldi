@@ -60,7 +60,7 @@
 /* custom cursor  */
 /* Essential cursor styles */
 body {
-  cursor: none !important;
+  /* cursor: none !important; */
 }
 
 a,
